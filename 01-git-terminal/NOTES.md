@@ -16,7 +16,7 @@
   - A change
 - Branch
   - A subfolder for your repository
-	- An alternate version or copy
+  - An alternate version or copy
 - Push
   - Submitting changes to the remote repository
 - Pull
