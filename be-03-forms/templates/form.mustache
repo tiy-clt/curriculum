@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+<head>
+</head>
+
+<body>
+    {{ #success }}
+    <h1>NEW DONUTS FOUND</h1>
+    {{ /success }}
+    <h2>Announce new donut</h2>
+    <form method="post" action="/new">
+        <label for="form_name">Name:</label>
+        <input type="text" id="form_name" name="name">
+
+        <label for="form_cake">Cake:</label>
+        <select id="form_cake" name="cake">
+            <option value="vanilla">Vanilla</option>
+            <option value="red-velvet">Red Velvet</option>
+            <option value="chocolate">Chocolate</option>
+        </select>
+
+        <label for="form_topping">Topping:</label>
+        <input type="text" id="form_topping" name="topping">
+
+        <input type="submit" value="Go">
+    </form>
+<ul>
+    {{ #options }}
+        <li>
+            <h3>{{ name }}</h3>
+            <p>Cake: {{ cake }}, Topping: {{ topping }}</p>
+        </li>
+    {{ /options }}
+</ul>
+</body>
+
+</html>
+
