@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>You're in, {{ username }}!</h1>
+    <p>You've logged in {{ loginCount }} times. Keep it up!</p>
+    <a href="/logout">logout</a>
+
+    <form method="post" action="/message">
+        <input type="text" name="msg">
+        <input type="submit" value="Send">
+    </form>
+
+    <ul>
+    {{ #messages }}
+        <li>
+            {{ #text }}
+            <h2>{{ text }}</h2>
+            {{ /text }}
+            {{ ^text }}
+            <h2>** silence **</h2>
+            {{ /text }}
+
+            <p>from {{ sender.username }}</p>
+        </li>
+    {{ /messages }}
+    </ul>
+</body>
+</html>
