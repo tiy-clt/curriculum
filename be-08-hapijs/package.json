@@ -1,0 +1,17 @@
+{
+  "name": "be-08-hapijs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "hapi": "^16.5.2",
+    "mongoose": "^4.11.8"
+  }
+}
