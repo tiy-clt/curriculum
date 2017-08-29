@@ -1,0 +1,16 @@
+<h1>All Things Online Store</h1>
+<p><a href="/cart">View Cart ({{ cartCount }})</a></p>
+
+<ul>
+    {{ #items }}
+        <li>
+            <img src="{{ image }}">
+            <a href="/details/{{ _id }}">{{ name }}</a>
+            <p>${{ price }}, rating: {{ reviews }} / 5.0</p>
+
+            <form method="post" action="/cart/{{ _id }}">
+                <input type="submit" value="Add to cart">
+            </form>
+        </li>
+    {{ /items }}
+</ul>

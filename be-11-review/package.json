@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^4.11.8"
+    "bluebird": "^3.5.0",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "mongoose": "^4.11.8",
+    "mustache-express": "^1.2.5"
   }
 }
