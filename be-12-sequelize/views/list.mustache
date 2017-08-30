@@ -1,0 +1,24 @@
+<h2>Doggie Day Care</h2>
+
+<p><a href="/add">Add new dog</a></p>
+
+<h3>Current customers</h3>
+<ul>
+    {{ #dogs }}
+    <li>
+        <p>{{ name }}</p>
+
+        {{ #checked_in }}
+        <form method="post" action="/checkout/{{ id }}">
+            <input type="submit" value="Check out">
+        </form>
+        {{ /checked_in }}
+        
+        {{ ^checked_in }}
+        <form method="post" action="/checkin/{{ id }}">
+            <input type="submit" value="Check in">
+        </form>
+        {{ /checked_in }}
+    </li>
+    {{ /dogs }}
+</ul>
