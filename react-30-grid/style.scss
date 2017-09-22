@@ -1,0 +1,82 @@
+
+// The idea: grids make layouts easier.
+
+$breakpoint-medium: 600px;
+$breakpoint-large: 1000px;
+
+@import 'node_modules/foundation-sites/scss/foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+header {
+    @include grid-row(); // 'include' is a sass function-ish
+
+    h1 {
+        @include grid-column(12);
+
+        @media (min-width: $breakpoint-large) {
+            @include grid-column(4);
+        }
+
+        background-color: lightsalmon;
+        margin: 0;
+    }
+
+    nav {
+        @include grid-column(12);
+
+        @media (min-width: $breakpoint-large) {
+            @include grid-column(8);
+        }
+
+        background-color: lightseagreen;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+main {
+    /* Note: you always want a different element to represent the row + columns */
+    section.hero {
+        @include grid-row();
+        background-color: maroon;
+        color: white;
+
+        h1 {
+            @include grid-column(10);
+            // @include grid-column-offset(2);
+        }
+    }
+
+    section.facts {
+        @include grid-row();
+
+        div {
+            @include grid-column(12);
+
+            @media (min-width: $breakpoint-medium) {
+                @include grid-column(6);
+            }
+
+            @media (min-width: $breakpoint-large) {
+                @include grid-column(4);
+            }
+
+            border: 3px solid green;
+        }
+    }
+}
+
+footer {
+    @include grid-row();
+
+    p {
+        @include grid-column(12);
+    }
+}
